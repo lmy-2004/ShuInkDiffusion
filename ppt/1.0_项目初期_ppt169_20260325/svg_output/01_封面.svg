@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" rx="0"/>
+<rect x="0" y="0" width="1280" height="100" fill="#1F4E79" rx="0"/>
+<rect x="0" y="0" width="6" height="100" fill="#C43D3D" rx="0"/>
+<rect x="1080" y="25" width="160" height="50" fill="none" rx="4" stroke="#FFFFFF" stroke-width="1"/>
+<text x="1160" y="58" text-anchor="middle" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<text x="640" y="300" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="52" font-weight="bold"><tspan x="640" dy="0">基于 Live2Diff 的</tspan><tspan x="640" dy="64">实时水墨风格视频渲染研究</tspan></text>
+<text x="640" y="408" text-anchor="middle" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" font-weight="normal">Ink-Diffusion 项目答辩汇报</text>
+<line x1="420" y1="450" x2="860" y2="450" stroke="#2F6B8A" stroke-width="2"/>
+<circle cx="640" cy="450" r="5" fill="#2F6B8A"/>
+<text x="640" y="520" text-anchor="middle" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="normal">答辩人：lmy_2004</text>
+<text x="640" y="560" text-anchor="middle" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">指导老师：待补充</text>
+<text x="640" y="600" text-anchor="middle" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">Ink-Diffusion 项目</text>
+<rect x="0" y="665" width="1280" height="55" fill="#F5F7FA" rx="0"/>
+<text x="640" y="698" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">2026-03-25</text>
+</svg>

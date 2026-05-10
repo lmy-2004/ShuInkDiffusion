@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" rx="0"/>
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0"/>
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0"/>
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">目 录</text>
+<text x="1200" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="80" y="115" width="540" height="90" fill="#E8EEF5" rx="8"/>
+<rect x="80" y="115" width="6" height="90" fill="#1F4E79" rx="3"/>
+<text x="120" y="160" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="36" font-weight="bold">01</text>
+<text x="185" y="160" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">研究定位与系统理解</text>
+<text x="120" y="188" text-anchor="start" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">回答研究对象、选型逻辑与系统边界</text>
+<rect x="660" y="115" width="540" height="90" fill="#E8EEF5" rx="8"/>
+<rect x="660" y="115" width="6" height="90" fill="#1F4E79" rx="3"/>
+<text x="700" y="160" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="36" font-weight="bold">02</text>
+<text x="765" y="160" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">关键机制拆解</text>
+<text x="700" y="188" text-anchor="start" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">解释实时性、UNet 中枢与缓存机制</text>
+<rect x="80" y="230" width="540" height="90" fill="#E8EEF5" rx="8"/>
+<rect x="80" y="230" width="6" height="90" fill="#2F6B8A" rx="3"/>
+<text x="120" y="275" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="36" font-weight="bold">03</text>
+<text x="185" y="275" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">瓶颈与改造方向</text>
+<text x="120" y="303" text-anchor="start" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">说明为何离高质量水墨仍有距离</text>
+<rect x="660" y="230" width="540" height="90" fill="#E8EEF5" rx="8"/>
+<rect x="660" y="230" width="6" height="90" fill="#2F6B8A" rx="3"/>
+<text x="700" y="275" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="36" font-weight="bold">04</text>
+<text x="765" y="275" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">升级路线与总结</text>
+<text x="700" y="303" text-anchor="start" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">给出面向水墨的结构化升级链路</text>
+<rect x="80" y="345" width="540" height="90" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="350" y="398" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="normal">研究结论与答辩讨论</text>
+<rect x="660" y="345" width="540" height="90" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1" stroke-dasharray="4,4"/>
+<text x="930" y="398" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" font-weight="normal">后续实验与工程落地</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1"/>
+<text x="1220" y="698" text-anchor="end" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">02</text>
+</svg>

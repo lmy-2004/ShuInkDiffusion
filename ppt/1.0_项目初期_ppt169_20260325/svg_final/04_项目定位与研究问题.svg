@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC" rx="0" />
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0" />
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0" />
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">01 项目定位与研究问题</text>
+<text x="1220" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="0" y="70" width="1280" height="50" fill="#E8EEF5" rx="0" />
+<rect x="0" y="70" width="6" height="50" fill="#2F6B8A" rx="0" />
+<text x="40" y="102" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">本项目聚焦实时扩散系统拆解与水墨导向改造，而不是重训新模型</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1" />
+<text x="40" y="695" text-anchor="start" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">数据来源：项目讲稿梳理</text>
+<text x="640" y="695" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">研究定位与系统理解</text>
+<text x="1220" y="695" text-anchor="end" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">04</text>
+<path fill="#FFFFFF" d="M68,150 H412 A8,8 0 0 1 420,158 V362 A8,8 0 0 1 412,370 H68 A8,8 0 0 1 60,362 V158 A8,8 0 0 1 68,150 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M68,150 H412 A8,8 0 0 1 420,158 V362 A8,8 0 0 1 412,370 H68 A8,8 0 0 1 60,362 V158 A8,8 0 0 1 68,150 Z" />
+
+  <g transform="translate(84.0, 176.0) scale(1.5)" fill="#1F4E79">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4ZM6 8C6 6.89543 6.89543 6 8 6C9.10457 6 10 6.89543 10 8C10 9.10457 9.10457 10 8 10C6.89543 10 6 9.10457 6 8Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0ZM2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8Z" />
+  </g>
+<text x="120" y="196" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">研究问题</text>
+<circle cx="86" cy="233" r="4" fill="#2F6B8A" />
+<text x="102" y="238" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">在接近实时约束下，把逐帧处理改造成流式推理</text>
+<circle cx="86" cy="267" r="4" fill="#2F6B8A" />
+<text x="102" y="272" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">在现有实时底座上逼近水墨风格的留白与笔触要求</text>
+<circle cx="86" cy="301" r="4" fill="#2F6B8A" />
+<text x="102" y="306" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">回答系统结构、瓶颈与面向水墨的改造方式</text>
+<path fill="#FFFFFF" d="M458,150 H1212 A8,8 0 0 1 1220,158 V362 A8,8 0 0 1 1212,370 H458 A8,8 0 0 1 450,362 V158 A8,8 0 0 1 458,150 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M458,150 H1212 A8,8 0 0 1 1220,158 V362 A8,8 0 0 1 1212,370 H458 A8,8 0 0 1 450,362 V158 A8,8 0 0 1 458,150 Z" />
+
+  <g transform="translate(474.0, 176.0) scale(1.5)" fill="#1F4E79">
+    <path d="M6 10V6H10V10H6Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2V0H5V2H7V0H9V2H11V0H13V2H14V3H16V5H14V7H16V9H14V11H16V13H14V14H13V16H11V14H9V16H7V14H5V16H3V14H2V13H0V11H2V9H0V7H2L2 5H0V3H2L2 2H3ZM4 4V12H12V4H4Z" />
+  </g>
+<text x="510" y="196" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">项目定位</text>
+<circle cx="476" cy="233" r="4" fill="#2F6B8A" />
+<text x="492" y="238" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">底层生成骨架来自 Live2Diff，而不是从零训练新的视频扩散模型</text>
+<circle cx="476" cy="267" r="4" fill="#2F6B8A" />
+<text x="492" y="272" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">当前重点是结构拆解、机制分析、瓶颈定位与面向水墨的系统改造设计</text>
+<circle cx="476" cy="301" r="4" fill="#2F6B8A" />
+<text x="492" y="306" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">因此它更像“面向水墨视频的实时扩散系统研究”，而非单纯风格 LoRA 调参</text>
+<path fill="#F9FBFD" d="M68,400 H1212 A8,8 0 0 1 1220,408 V572 A8,8 0 0 1 1212,580 H68 A8,8 0 0 1 60,572 V408 A8,8 0 0 1 68,400 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M68,400 H1212 A8,8 0 0 1 1220,408 V572 A8,8 0 0 1 1212,580 H68 A8,8 0 0 1 60,572 V408 A8,8 0 0 1 68,400 Z" />
+<text x="88" y="436" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">答辩主线</text>
+<text font-weight="normal" text-anchor="start" font-size="20" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="88" y="478">1. 先解释为什么选择 Live2Diff，以及这套系统的技术边界。</text><text font-weight="normal" text-anchor="start" font-size="20" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="88" y="512">2. 再拆解实时性的真正来源、UNet 的核心地位，以及缓存与条件注入机制。</text><text font-weight="normal" text-anchor="start" font-size="20" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="88" y="546">3. 最后说明为什么它还不足以支撑高质量水墨，并给出对应的升级路线。</text></svg>

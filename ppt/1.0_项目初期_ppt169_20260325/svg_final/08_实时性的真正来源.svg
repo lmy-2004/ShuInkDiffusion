@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC" rx="0" />
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0" />
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0" />
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">02 实时性的真正来源</text>
+<text x="1220" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="0" y="70" width="1280" height="50" fill="#E8EEF5" rx="0" />
+<rect x="0" y="70" width="6" height="50" fill="#2F6B8A" rx="0" />
+<text x="40" y="102" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">实时性首先来自流式建模与少步采样，其次才是 TensorRT 之类的执行层优化</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1" />
+<text x="40" y="695" text-anchor="start" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">数据来源：Live2Diff 架构分析</text>
+<text x="640" y="695" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">关键机制拆解</text>
+<text x="1220" y="695" text-anchor="end" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">08</text>
+<path fill="#FFFFFF" d="M78,150 H582 A8,8 0 0 1 590,158 V198 A8,8 0 0 1 582,206 H78 A8,8 0 0 1 70,198 V158 A8,8 0 0 1 78,150 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M78,150 H582 A8,8 0 0 1 590,158 V198 A8,8 0 0 1 582,206 H78 A8,8 0 0 1 70,198 V158 A8,8 0 0 1 78,150 Z" />
+<text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="174">1 单向时序注意力</text><text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="196">把视频问题改写成流式问题</text><path fill="#FFFFFF" d="M78,222 H582 A8,8 0 0 1 590,230 V270 A8,8 0 0 1 582,278 H78 A8,8 0 0 1 70,270 V230 A8,8 0 0 1 78,222 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M78,222 H582 A8,8 0 0 1 590,230 V270 A8,8 0 0 1 582,278 H78 A8,8 0 0 1 70,270 V230 A8,8 0 0 1 78,222 Z" />
+<text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="246">2 warmup</text><text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="268">正式推理前建立时序上下文</text><path fill="#FFFFFF" d="M78,294 H582 A8,8 0 0 1 590,302 V342 A8,8 0 0 1 582,350 H78 A8,8 0 0 1 70,342 V302 A8,8 0 0 1 78,294 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M78,294 H582 A8,8 0 0 1 590,302 V342 A8,8 0 0 1 582,350 H78 A8,8 0 0 1 70,342 V302 A8,8 0 0 1 78,294 Z" />
+<text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="318">3 KV-cache</text><text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="340">避免每帧重算整段历史</text><path fill="#FFFFFF" d="M78,366 H582 A8,8 0 0 1 590,374 V414 A8,8 0 0 1 582,422 H78 A8,8 0 0 1 70,414 V374 A8,8 0 0 1 78,366 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M78,366 H582 A8,8 0 0 1 590,374 V414 A8,8 0 0 1 582,422 H78 A8,8 0 0 1 70,414 V374 A8,8 0 0 1 78,366 Z" />
+<text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="390">4 LCM few-step</text><text font-weight="bold" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="412">显著压缩每帧扩散步数</text><path fill="#F6FBF8" d="M78,438 H582 A8,8 0 0 1 590,446 V486 A8,8 0 0 1 582,494 H78 A8,8 0 0 1 70,486 V446 A8,8 0 0 1 78,438 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M78,438 H582 A8,8 0 0 1 590,446 V486 A8,8 0 0 1 582,494 H78 A8,8 0 0 1 70,486 V446 A8,8 0 0 1 78,438 Z" />
+<text font-weight="normal" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="462">5 denoising batch</text><text font-weight="normal" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="484">把多个去噪阶段并入一次前向</text><path fill="#F6FBF8" d="M78,510 H582 A8,8 0 0 1 590,518 V558 A8,8 0 0 1 582,566 H78 A8,8 0 0 1 70,558 V518 A8,8 0 0 1 78,510 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M78,510 H582 A8,8 0 0 1 590,518 V558 A8,8 0 0 1 582,566 H78 A8,8 0 0 1 70,558 V518 A8,8 0 0 1 78,510 Z" />
+<text font-weight="normal" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="534">6 TinyVAE / TensorRT</text><text font-weight="normal" text-anchor="start" font-size="18" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="96" y="556">继续压执行时延</text><path fill="#E8EEF5" d="M658,160 H1182 A8,8 0 0 1 1190,168 V322 A8,8 0 0 1 1182,330 H658 A8,8 0 0 1 650,322 V168 A8,8 0 0 1 658,160 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M658,160 H1182 A8,8 0 0 1 1190,168 V322 A8,8 0 0 1 1182,330 H658 A8,8 0 0 1 650,322 V168 A8,8 0 0 1 658,160 Z" />
+<text x="680" y="198" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">决定系统能否进入实时区间</text>
+<circle cx="680" cy="231" r="4" fill="#2F6B8A" />
+<text x="696" y="236" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">单向时序注意力</text>
+<circle cx="680" cy="265" r="4" fill="#2F6B8A" />
+<text x="696" y="270" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">warmup</text>
+<circle cx="680" cy="299" r="4" fill="#2F6B8A" />
+<text x="696" y="304" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">KV-cache</text>
+<circle cx="680" cy="333" r="4" fill="#2F6B8A" />
+<text x="696" y="338" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">LCM few-step</text>
+<path fill="#F6FBF8" d="M658,370 H1182 A8,8 0 0 1 1190,378 V492 A8,8 0 0 1 1182,500 H658 A8,8 0 0 1 650,492 V378 A8,8 0 0 1 658,370 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M658,370 H1182 A8,8 0 0 1 1190,378 V492 A8,8 0 0 1 1182,500 H658 A8,8 0 0 1 650,492 V378 A8,8 0 0 1 658,370 Z" />
+<text x="680" y="408" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">决定系统能否继续向部署靠近</text>
+<circle cx="680" cy="441" r="4" fill="#2F6B8A" />
+<text x="696" y="446" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">denoising batch</text>
+<circle cx="680" cy="475" r="4" fill="#2F6B8A" />
+<text x="696" y="480" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">TinyVAE / TensorRT</text>
+<path fill="#FFF8F8" d="M658,530 H1182 A8,8 0 0 1 1190,538 V592 A8,8 0 0 1 1182,600 H658 A8,8 0 0 1 650,592 V538 A8,8 0 0 1 658,530 Z" />
+<path fill="none" stroke="#E7CACA" stroke-width="1" d="M658,530 H1182 A8,8 0 0 1 1190,538 V592 A8,8 0 0 1 1182,600 H658 A8,8 0 0 1 650,592 V538 A8,8 0 0 1 658,530 Z" />
+<text font-weight="bold" text-anchor="start" font-size="20" fill="#C43D3D" font-family="Microsoft YaHei, Arial, sans-serif" x="680" y="558">因此，TensorRT 不是实时性的起点，</text><text font-weight="bold" text-anchor="start" font-size="20" fill="#C43D3D" font-family="Microsoft YaHei, Arial, sans-serif" x="680" y="584">它只是把已经成立的实时链路继续推向部署。</text></svg>

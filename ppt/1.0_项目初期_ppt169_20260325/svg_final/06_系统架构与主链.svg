@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC" rx="0" />
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0" />
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0" />
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">01 系统架构与单帧主链</text>
+<text x="1220" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="0" y="70" width="1280" height="50" fill="#E8EEF5" rx="0" />
+<rect x="0" y="70" width="6" height="50" fill="#2F6B8A" rx="0" />
+<text x="40" y="102" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">系统在工程上可拆为四层，单帧推理则由 latent、depth、UNet、scheduler 串成闭环</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1" />
+<text x="40" y="695" text-anchor="start" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">数据来源：项目讲稿整理</text>
+<text x="640" y="695" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">研究定位与系统理解</text>
+<text x="1220" y="695" text-anchor="end" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">06</text>
+<path fill="#FFFFFF" d="M88,160 H312 A8,8 0 0 1 320,168 V292 A8,8 0 0 1 312,300 H88 A8,8 0 0 1 80,292 V168 A8,8 0 0 1 88,160 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M88,160 H312 A8,8 0 0 1 320,168 V292 A8,8 0 0 1 312,300 H88 A8,8 0 0 1 80,292 V168 A8,8 0 0 1 88,160 Z" />
+
+  <g transform="translate(100.0, 184.0) scale(1.5)" fill="#1F4E79">
+    <path d="M7 0H2V16H14V7H7V0Z" />
+    <path d="M9 0V5H14L9 0Z" />
+  </g>
+<text x="136" y="204" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">入口层</text>
+<text font-weight="normal" text-anchor="start" font-size="18" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" x="100" y="242">离线脚本、在线 demo、配置系统</text><path fill="#FFFFFF" d="M383,160 H607 A8,8 0 0 1 615,168 V292 A8,8 0 0 1 607,300 H383 A8,8 0 0 1 375,292 V168 A8,8 0 0 1 383,160 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M383,160 H607 A8,8 0 0 1 615,168 V292 A8,8 0 0 1 607,300 H383 A8,8 0 0 1 375,292 V168 A8,8 0 0 1 383,160 Z" />
+
+  <g transform="translate(395.0, 184.0) scale(1.5)" fill="#1F4E79">
+    <path d="M1 5V3L8 0L15 3V5L8 8L1 5Z" />
+    <path d="M8 16L1 13V11L8 14L15 11V13L8 16Z" />
+    <path d="M1 9L8 12L15 9V7L8 10L1 7V9Z" />
+  </g>
+<text x="431" y="204" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">组装层</text>
+<text font-weight="normal" text-anchor="start" font-size="18" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" x="395" y="242">wrapper 组装模型、LoRA、缓存与后端</text><path fill="#FFFFFF" d="M678,160 H902 A8,8 0 0 1 910,168 V292 A8,8 0 0 1 902,300 H678 A8,8 0 0 1 670,292 V168 A8,8 0 0 1 678,160 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M678,160 H902 A8,8 0 0 1 910,168 V292 A8,8 0 0 1 902,300 H678 A8,8 0 0 1 670,292 V168 A8,8 0 0 1 678,160 Z" />
+
+  <g transform="translate(690.0, 184.0) scale(1.5)" fill="#1F4E79">
+    <path d="M6 10V6H10V10H6Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2V0H5V2H7V0H9V2H11V0H13V2H14V3H16V5H14V7H16V9H14V11H16V13H14V14H13V16H11V14H9V16H7V14H5V16H3V14H2V13H0V11H2V9H0V7H2L2 5H0V3H2L2 2H3ZM4 4V12H12V4H4Z" />
+  </g>
+<text x="726" y="204" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">推理层</text>
+<text font-weight="normal" text-anchor="start" font-size="18" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" x="690" y="242">StreamAnimateDiffusionDepth 负责 warmup 与单帧推理</text><path fill="#FFFFFF" d="M973,160 H1197 A8,8 0 0 1 1205,168 V292 A8,8 0 0 1 1197,300 H973 A8,8 0 0 1 965,292 V168 A8,8 0 0 1 973,160 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M973,160 H1197 A8,8 0 0 1 1205,168 V292 A8,8 0 0 1 1197,300 H973 A8,8 0 0 1 965,292 V168 A8,8 0 0 1 973,160 Z" />
+
+  <g transform="translate(985.0, 184.0) scale(1.5)" fill="#1F4E79">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75463 14C0.656718 12.6304 0 10.8919 0 9C0 4.58172 3.58172 1 8 1C12.4183 1 16 4.58172 16 9C16 10.8919 15.3433 12.6304 14.2454 14H9.20171L12.7343 10.1789L11.2657 8.82118L6.47798 14H1.75463ZM7 4C7 4.55228 7.44771 5 8 5C8.55228 5 9 4.55228 9 4C9 3.44772 8.55228 3 8 3C7.44771 3 7 3.44772 7 4ZM11.5 6.5C10.9477 6.5 10.5 6.05228 10.5 5.5C10.5 4.94772 10.9477 4.5 11.5 4.5C12.0523 4.5 12.5 4.94772 12.5 5.5C12.5 6.05228 12.0523 6.5 11.5 6.5ZM2 9C2 9.55229 2.44771 10 3 10C3.55229 10 4 9.55229 4 9C4 8.44772 3.55229 8 3 8C2.44771 8 2 8.44772 2 9ZM4.5 6.5C3.94772 6.5 3.5 6.05228 3.5 5.5C3.5 4.94772 3.94772 4.5 4.5 4.5C5.05229 4.5 5.5 4.94772 5.5 5.5C5.5 6.05228 5.05229 6.5 4.5 6.5Z" />
+  </g>
+<text x="1021" y="204" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">加速层</text>
+<text font-weight="normal" text-anchor="start" font-size="18" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" x="985" y="242">TinyVAE、TensorRT、xformers 负责执行替换</text><line x1="320" y1="230" x2="355" y2="230" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="347,224 347,236 355,230" fill="#2F6B8A" />
+<line x1="615" y1="230" x2="650" y2="230" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="642,224 642,236 650,230" fill="#2F6B8A" />
+<line x1="910" y1="230" x2="945" y2="230" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="937,224 937,236 945,230" fill="#2F6B8A" />
+<path fill="#FFFFFF" d="M88,390 H252 A8,8 0 0 1 260,398 V478 A8,8 0 0 1 252,486 H88 A8,8 0 0 1 80,478 V398 A8,8 0 0 1 88,390 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M88,390 H252 A8,8 0 0 1 260,398 V478 A8,8 0 0 1 252,486 H88 A8,8 0 0 1 80,478 V398 A8,8 0 0 1 88,390 Z" />
+<text x="170.0" y="428" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">输入帧</text>
+<path fill="#FFFFFF" d="M308,390 H492 A8,8 0 0 1 500,398 V478 A8,8 0 0 1 492,486 H308 A8,8 0 0 1 300,478 V398 A8,8 0 0 1 308,390 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M308,390 H492 A8,8 0 0 1 500,398 V478 A8,8 0 0 1 492,486 H308 A8,8 0 0 1 300,478 V398 A8,8 0 0 1 308,390 Z" />
+<text x="400.0" y="428" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">RGB latent</text>
+<path fill="#FFFFFF" d="M548,390 H732 A8,8 0 0 1 740,398 V478 A8,8 0 0 1 732,486 H548 A8,8 0 0 1 540,478 V398 A8,8 0 0 1 548,390 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M548,390 H732 A8,8 0 0 1 740,398 V478 A8,8 0 0 1 732,486 H548 A8,8 0 0 1 540,478 V398 A8,8 0 0 1 548,390 Z" />
+<text x="640.0" y="428" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">depth latent</text>
+<path fill="#FFFFFF" d="M788,390 H992 A8,8 0 0 1 1000,398 V478 A8,8 0 0 1 992,486 H788 A8,8 0 0 1 780,478 V398 A8,8 0 0 1 788,390 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M788,390 H992 A8,8 0 0 1 1000,398 V478 A8,8 0 0 1 992,486 H788 A8,8 0 0 1 780,478 V398 A8,8 0 0 1 788,390 Z" />
+<text x="890.0" y="428" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">Streaming UNet</text>
+<path fill="#FFFFFF" d="M1048,390 H1192 A8,8 0 0 1 1200,398 V478 A8,8 0 0 1 1192,486 H1048 A8,8 0 0 1 1040,478 V398 A8,8 0 0 1 1048,390 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M1048,390 H1192 A8,8 0 0 1 1200,398 V478 A8,8 0 0 1 1192,486 H1048 A8,8 0 0 1 1040,478 V398 A8,8 0 0 1 1048,390 Z" />
+<text x="1120.0" y="428" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">LCM 调度</text>
+<line x1="260" y1="438" x2="292" y2="438" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="284,432 284,444 292,438" fill="#2F6B8A" />
+<line x1="500" y1="438" x2="532" y2="438" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="524,432 524,444 532,438" fill="#2F6B8A" />
+<line x1="740" y1="438" x2="772" y2="438" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="764,432 764,444 772,438" fill="#2F6B8A" />
+<line x1="1000" y1="438" x2="1032" y2="438" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="1024,432 1024,444 1032,438" fill="#2F6B8A" />
+<text x="1120" y="452" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">输出帧</text>
+<text x="90" y="540" text-anchor="start" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">核心表达：RGB_t -&gt; z_t；RGB_t -&gt; depth_t -&gt; d_t；(z_t, d_t, prompt, temporal state) -&gt; UNet -&gt; scheduler -&gt; z_0 -&gt; RGB_out</text>
+</svg>

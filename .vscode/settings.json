@@ -1,0 +1,9 @@
+{
+    "svn.delete.ignoredRulesForDeletedFiles": [
+        "md/0.3_Live2Diff基础知识补充.md"
+    ],
+    "tinymist.rootPath": "${workspaceFolder}/thesis-shu",
+    "tinymist.fontPaths": [
+        "${workspaceFolder}/thesis-shu/fonts"
+    ]
+}

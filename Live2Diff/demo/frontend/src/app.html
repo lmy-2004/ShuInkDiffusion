@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        var q = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+        function sync() {
+          document.documentElement.classList.toggle('dark', q.matches);
+        }
+        if (q) {
+          sync();
+          q.addEventListener('change', sync);
+        }
+      })();
+    </script>
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
+</html>

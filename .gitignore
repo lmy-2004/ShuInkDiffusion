@@ -1,0 +1,46 @@
+# 权重与大模型二进制（约占数十 GB，勿提交）
+Live2Diff/models/
+Live2Diff/cri_key.txt
+
+# 前端生成物
+Live2Diff/demo/frontend/.svelte-kit/
+Live2Diff/demo/frontend/build/
+
+# 本地编辑器
+.cursor/
+
+# 预置运行时 / 离线 Node 套件
+Live2Diff/.tools/
+
+# 数据集与成片（体积大时用 Git LFS 或单独分发）
+/data/
+
+# 依赖与环境
+**/node_modules/
+**/.venv/
+**/venv/
+**/.env.local
+.Python
+**/dist/
+**/*.egg-info/
+**/build/
+
+# SVN 元数据（若仍保留 .svn）
+.svn/
+
+# Python 缓存与工具
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 构建产物（论文 PDF 若很大可解开下一行）
+# thesis-shu/thesis.pdf
+
+# 编辑器与系统
+.idea/
+*.swp
+.DS_Store

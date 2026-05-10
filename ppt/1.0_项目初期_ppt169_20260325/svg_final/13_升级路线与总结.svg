@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC" rx="0" />
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0" />
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0" />
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">03 升级路线与总结</text>
+<text x="1220" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="0" y="70" width="1280" height="50" fill="#E8EEF5" rx="0" />
+<rect x="0" y="70" width="6" height="50" fill="#2F6B8A" rx="0" />
+<text x="40" y="102" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">升级方向可以压缩为两条主线：多条件融合，以及分层的面向风格采样调度</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1" />
+<text x="40" y="695" text-anchor="start" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">数据来源：项目讲稿整理</text>
+<text x="640" y="695" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">瓶颈与改造方向</text>
+<text x="1220" y="695" text-anchor="end" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">13</text>
+<path fill="#FFFFFF" d="M78,170 H242 A8,8 0 0 1 250,178 V252 A8,8 0 0 1 242,260 H78 A8,8 0 0 1 70,252 V178 A8,8 0 0 1 78,170 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M78,170 H242 A8,8 0 0 1 250,178 V252 A8,8 0 0 1 242,260 H78 A8,8 0 0 1 70,252 V178 A8,8 0 0 1 78,170 Z" />
+<text x="160.0" y="222" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold">输入与预处理</text>
+<path fill="#FFFFFF" d="M288,170 H492 A8,8 0 0 1 500,178 V252 A8,8 0 0 1 492,260 H288 A8,8 0 0 1 280,252 V178 A8,8 0 0 1 288,170 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M288,170 H492 A8,8 0 0 1 500,178 V252 A8,8 0 0 1 492,260 H288 A8,8 0 0 1 280,252 V178 A8,8 0 0 1 288,170 Z" />
+<text x="390.0" y="222" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold">Depth + Edge + Mask</text>
+<path fill="#FFFFFF" d="M548,170 H722 A8,8 0 0 1 730,178 V252 A8,8 0 0 1 722,260 H548 A8,8 0 0 1 540,252 V178 A8,8 0 0 1 548,170 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M548,170 H722 A8,8 0 0 1 730,178 V252 A8,8 0 0 1 722,260 H548 A8,8 0 0 1 540,252 V178 A8,8 0 0 1 548,170 Z" />
+<text x="635.0" y="222" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold">Condition Fusion</text>
+<path fill="#FFFFFF" d="M798,170 H982 A8,8 0 0 1 990,178 V252 A8,8 0 0 1 982,260 H798 A8,8 0 0 1 790,252 V178 A8,8 0 0 1 798,170 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M798,170 H982 A8,8 0 0 1 990,178 V252 A8,8 0 0 1 982,260 H798 A8,8 0 0 1 790,252 V178 A8,8 0 0 1 798,170 Z" />
+<text x="890.0" y="222" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold">Streaming UNet</text>
+<path fill="#FFFFFF" d="M1028,170 H1202 A8,8 0 0 1 1210,178 V252 A8,8 0 0 1 1202,260 H1028 A8,8 0 0 1 1020,252 V178 A8,8 0 0 1 1028,170 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="1" d="M1028,170 H1202 A8,8 0 0 1 1210,178 V252 A8,8 0 0 1 1202,260 H1028 A8,8 0 0 1 1020,252 V178 A8,8 0 0 1 1028,170 Z" />
+<text x="1115.0" y="222" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold">Two-Stage Ink Sampling</text>
+<line x1="250" y1="215" x2="268" y2="215" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="260,209 260,221 268,215" fill="#2F6B8A" />
+<line x1="500" y1="215" x2="528" y2="215" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="520,209 520,221 528,215" fill="#2F6B8A" />
+<line x1="730" y1="215" x2="778" y2="215" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="770,209 770,221 778,215" fill="#2F6B8A" />
+<line x1="990" y1="215" x2="1008" y2="215" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="1000,209 1000,221 1008,215" fill="#2F6B8A" />
+<text x="80" y="316" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">对应的改造动作</text>
+<circle cx="86" cy="351" r="4" fill="#2F6B8A" />
+<text x="102" y="356" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">把 encode_depth 从逐帧 min-max 归一化改成更稳定的时序归一化</text>
+<circle cx="86" cy="393" r="4" fill="#2F6B8A" />
+<text x="102" y="398" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">从 depth-only 升级为 depth + edge/lineart，并引入前景背景分离</text>
+<circle cx="86" cy="435" r="4" fill="#2F6B8A" />
+<text x="102" y="440" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">让早期 timestep 更偏结构、后期 timestep 更偏墨韵</text>
+<circle cx="86" cy="477" r="4" fill="#2F6B8A" />
+<text x="102" y="482" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">训练 temporal adapter / temporal LoRA，并把 cache 复用升级为可学习记忆</text>
+<path fill="#E8EEF5" d="M768,320 H1212 A8,8 0 0 1 1220,328 V572 A8,8 0 0 1 1212,580 H768 A8,8 0 0 1 760,572 V328 A8,8 0 0 1 768,320 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M768,320 H1212 A8,8 0 0 1 1220,328 V572 A8,8 0 0 1 1212,580 H768 A8,8 0 0 1 760,572 V328 A8,8 0 0 1 768,320 Z" />
+<text x="790" y="358" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">答辩结论</text>
+<text font-weight="normal" text-anchor="start" font-size="20" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="790" y="402">1. Live2Diff 的价值在于提供实时视频扩散底座。</text><text font-weight="normal" text-anchor="start" font-size="20" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="790" y="444">2. 当前系统的真正中枢是 UNet，而不是 demo 或 LoRA。</text><text font-weight="normal" text-anchor="start" font-size="20" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" x="790" y="486">3. 面向高质量实时水墨，关键差距在条件控制与时序建模。</text><path fill="#F5F9FC" d="M68,610 H1212 A8,8 0 0 1 1220,618 V640 A8,8 0 0 1 1212,648 H68 A8,8 0 0 1 60,640 V618 A8,8 0 0 1 68,610 Z" />
+<text x="80" y="635" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">一句话概括：从“能跑起来的实时视频扩散”走向“稳定可控的实时水墨视频”，核心在于让结构条件和时序记忆真正面向水墨服务。</text>
+</svg>

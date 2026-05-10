@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC" rx="0"/>
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0"/>
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0"/>
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">02 实时性的真正来源</text>
+<text x="1220" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="0" y="70" width="1280" height="50" fill="#E8EEF5" rx="0"/>
+<rect x="0" y="70" width="6" height="50" fill="#2F6B8A" rx="0"/>
+<text x="40" y="102" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">实时性首先来自流式建模与少步采样，其次才是 TensorRT 之类的执行层优化</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1"/>
+<text x="40" y="695" text-anchor="start" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">数据来源：Live2Diff 架构分析</text>
+<text x="640" y="695" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">关键机制拆解</text>
+<text x="1220" y="695" text-anchor="end" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">08</text>
+<rect x="70" y="150" width="520" height="56" fill="#FFFFFF" rx="8"/>
+<rect x="70" y="150" width="520" height="56" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="96" y="174" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold"><tspan x="96" dy="0">1 单向时序注意力</tspan><tspan x="96" dy="22">把视频问题改写成流式问题</tspan></text>
+<rect x="70" y="222" width="520" height="56" fill="#FFFFFF" rx="8"/>
+<rect x="70" y="222" width="520" height="56" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="96" y="246" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold"><tspan x="96" dy="0">2 warmup</tspan><tspan x="96" dy="22">正式推理前建立时序上下文</tspan></text>
+<rect x="70" y="294" width="520" height="56" fill="#FFFFFF" rx="8"/>
+<rect x="70" y="294" width="520" height="56" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="96" y="318" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold"><tspan x="96" dy="0">3 KV-cache</tspan><tspan x="96" dy="22">避免每帧重算整段历史</tspan></text>
+<rect x="70" y="366" width="520" height="56" fill="#FFFFFF" rx="8"/>
+<rect x="70" y="366" width="520" height="56" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="96" y="390" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold"><tspan x="96" dy="0">4 LCM few-step</tspan><tspan x="96" dy="22">显著压缩每帧扩散步数</tspan></text>
+<rect x="70" y="438" width="520" height="56" fill="#F6FBF8" rx="8"/>
+<rect x="70" y="438" width="520" height="56" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="96" y="462" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal"><tspan x="96" dy="0">5 denoising batch</tspan><tspan x="96" dy="22">把多个去噪阶段并入一次前向</tspan></text>
+<rect x="70" y="510" width="520" height="56" fill="#F6FBF8" rx="8"/>
+<rect x="70" y="510" width="520" height="56" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="96" y="534" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal"><tspan x="96" dy="0">6 TinyVAE / TensorRT</tspan><tspan x="96" dy="22">继续压执行时延</tspan></text>
+<rect x="650" y="160" width="540" height="170" fill="#E8EEF5" rx="8"/>
+<rect x="650" y="160" width="540" height="170" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="680" y="198" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">决定系统能否进入实时区间</text>
+<circle cx="680" cy="231" r="4" fill="#2F6B8A"/>
+<text x="696" y="236" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">单向时序注意力</text>
+<circle cx="680" cy="265" r="4" fill="#2F6B8A"/>
+<text x="696" y="270" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">warmup</text>
+<circle cx="680" cy="299" r="4" fill="#2F6B8A"/>
+<text x="696" y="304" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">KV-cache</text>
+<circle cx="680" cy="333" r="4" fill="#2F6B8A"/>
+<text x="696" y="338" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">LCM few-step</text>
+<rect x="650" y="370" width="540" height="130" fill="#F6FBF8" rx="8"/>
+<rect x="650" y="370" width="540" height="130" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<text x="680" y="408" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">决定系统能否继续向部署靠近</text>
+<circle cx="680" cy="441" r="4" fill="#2F6B8A"/>
+<text x="696" y="446" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">denoising batch</text>
+<circle cx="680" cy="475" r="4" fill="#2F6B8A"/>
+<text x="696" y="480" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">TinyVAE / TensorRT</text>
+<rect x="650" y="530" width="540" height="70" fill="#FFF8F8" rx="8"/>
+<rect x="650" y="530" width="540" height="70" fill="none" rx="8" stroke="#E7CACA" stroke-width="1"/>
+<text x="680" y="558" text-anchor="start" fill="#C43D3D" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="bold"><tspan x="680" dy="0">因此，TensorRT 不是实时性的起点，</tspan><tspan x="680" dy="26">它只是把已经成立的实时链路继续推向部署。</tspan></text>
+</svg>

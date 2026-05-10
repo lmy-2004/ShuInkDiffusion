@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC" rx="0" />
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0" />
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0" />
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">02 UNet 为何是系统中枢</text>
+<text x="1220" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="0" y="70" width="1280" height="50" fill="#E8EEF5" rx="0" />
+<rect x="0" y="70" width="6" height="50" fill="#2F6B8A" rx="0" />
+<text x="40" y="102" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">所有关键状态都在 Streaming UNet 汇合，因此它不只是普通去噪器</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1" />
+<text x="40" y="695" text-anchor="start" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">数据来源：项目讲稿整理</text>
+<text x="640" y="695" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">关键机制拆解</text>
+<text x="1220" y="695" text-anchor="end" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">09</text>
+<path fill="#FFFFFF" d="M428,220 H852 A8,8 0 0 1 860,228 V432 A8,8 0 0 1 852,440 H428 A8,8 0 0 1 420,432 V228 A8,8 0 0 1 428,220 Z" />
+<path fill="none" stroke="#2F6B8A" stroke-width="2" d="M428,220 H852 A8,8 0 0 1 860,228 V432 A8,8 0 0 1 852,440 H428 A8,8 0 0 1 420,432 V228 A8,8 0 0 1 428,220 Z" />
+
+  <g transform="translate(610.0, 250.0) scale(2.5)" fill="#1F4E79">
+    <path d="M6 10V6H10V10H6Z" />
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 2V0H5V2H7V0H9V2H11V0H13V2H14V3H16V5H14V7H16V9H14V11H16V13H14V14H13V16H11V14H9V16H7V14H5V16H3V14H2V13H0V11H2V9H0V7H2L2 5H0V3H2L2 2H3ZM4 4V12H12V4H4Z" />
+  </g>
+<text x="640" y="318" text-anchor="middle" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="38" font-weight="bold">Streaming UNet</text>
+<text font-weight="normal" text-anchor="middle" font-size="18" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" x="640" y="360">latent 主干 + 时序注意力 + depth 条件 + LCM 调度接口</text><path fill="#FFFFFF" d="M118,180 H322 A8,8 0 0 1 330,188 V256 A8,8 0 0 1 322,264 H118 A8,8 0 0 1 110,256 V188 A8,8 0 0 1 118,180 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M118,180 H322 A8,8 0 0 1 330,188 V256 A8,8 0 0 1 322,264 H118 A8,8 0 0 1 110,256 V188 A8,8 0 0 1 118,180 Z" />
+
+  <g transform="translate(128.0, 200.0) scale(1.375)" fill="#1F4E79">
+    <path d="M1 5V3L8 0L15 3V5L8 8L1 5Z" />
+    <path d="M8 16L1 13V11L8 14L15 11V13L8 16Z" />
+    <path d="M1 9L8 12L15 9V7L8 10L1 7V9Z" />
+  </g>
+<text x="160" y="226" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="bold">当前 noisy latent</text>
+<path fill="#FFFFFF" d="M118,330 H322 A8,8 0 0 1 330,338 V406 A8,8 0 0 1 322,414 H118 A8,8 0 0 1 110,406 V338 A8,8 0 0 1 118,330 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M118,330 H322 A8,8 0 0 1 330,338 V406 A8,8 0 0 1 322,414 H118 A8,8 0 0 1 110,406 V338 A8,8 0 0 1 118,330 Z" />
+
+  <g transform="translate(128.0, 350.0) scale(1.375)" fill="#1F4E79">
+    <path d="M4 1H6L8.2 7.05L10 3H12L16 12V14H0V12L4 1Z" />
+  </g>
+<text x="160" y="376" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="bold">depth latent</text>
+<path fill="#FFFFFF" d="M958,180 H1162 A8,8 0 0 1 1170,188 V256 A8,8 0 0 1 1162,264 H958 A8,8 0 0 1 950,256 V188 A8,8 0 0 1 958,180 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M958,180 H1162 A8,8 0 0 1 1170,188 V256 A8,8 0 0 1 1162,264 H958 A8,8 0 0 1 950,256 V188 A8,8 0 0 1 958,180 Z" />
+
+  <g transform="translate(968.0, 200.0) scale(1.375)" fill="#1F4E79">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M16 1H0V13H5L8 16L11 13H16V1ZM3 6H5V8H3V6ZM9 6H7V8H9V6ZM13 6H11V8H13V6Z" />
+  </g>
+<text x="1000" y="226" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="bold">prompt embeds</text>
+<path fill="#FFFFFF" d="M958,330 H1162 A8,8 0 0 1 1170,338 V406 A8,8 0 0 1 1162,414 H958 A8,8 0 0 1 950,406 V338 A8,8 0 0 1 958,330 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M958,330 H1162 A8,8 0 0 1 1170,338 V406 A8,8 0 0 1 1162,414 H958 A8,8 0 0 1 950,406 V338 A8,8 0 0 1 958,330 Z" />
+
+  <g transform="translate(968.0, 350.0) scale(1.375)" fill="#1F4E79">
+    <path d="M13.1371 6.91018C13.4184 6.7695 13.7123 6.59981 14 6.40001V8C14 9.65685 11.3137 11 8 11C4.68629 11 2 9.65685 2 8V6.40001C2.28772 6.59981 2.58158 6.7695 2.86293 6.91018C4.28096 7.61919 6.09998 8 8 8C9.90002 8 11.719 7.61919 13.1371 6.91018Z" />
+    <path d="M2 11.4V13C2 14.6569 4.68629 16 8 16C11.3137 16 14 14.6569 14 13V11.4C13.7123 11.5998 13.4184 11.7695 13.1371 11.9102C11.719 12.6192 9.90002 13 8 13C6.09998 13 4.28096 12.6192 2.86293 11.9102C2.58158 11.7695 2.28772 11.5998 2 11.4Z" />
+    <path d="M8 0C11.3137 0 14 1.34315 14 3C14 4.65685 11.3137 6 8 6C4.68629 6 2 4.65685 2 3C2 1.34315 4.68629 0 8 0Z" />
+  </g>
+<text x="1000" y="376" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="bold">KV-cache</text>
+<path fill="#FFFFFF" d="M118,500 H322 A8,8 0 0 1 330,508 V576 A8,8 0 0 1 322,584 H118 A8,8 0 0 1 110,576 V508 A8,8 0 0 1 118,500 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M118,500 H322 A8,8 0 0 1 330,508 V576 A8,8 0 0 1 322,584 H118 A8,8 0 0 1 110,576 V508 A8,8 0 0 1 118,500 Z" />
+
+  <g transform="translate(128.0, 520.0) scale(1.375)" fill="#1F4E79">
+    <path d="M3 1H8V3H15V5H8V7H3V5H1V3H3V1Z" />
+    <path d="M13 13H15V11H13V9H8V11H1V13H8V15H13V13Z" />
+  </g>
+<text x="160" y="546" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="bold">attn_bias / pe_idx</text>
+<path fill="#FFFFFF" d="M958,500 H1162 A8,8 0 0 1 1170,508 V576 A8,8 0 0 1 1162,584 H958 A8,8 0 0 1 950,576 V508 A8,8 0 0 1 958,500 Z" />
+<path fill="none" stroke="#C9D3DF" stroke-width="1" d="M958,500 H1162 A8,8 0 0 1 1170,508 V576 A8,8 0 0 1 1162,584 H958 A8,8 0 0 1 950,576 V508 A8,8 0 0 1 958,500 Z" />
+
+  <g transform="translate(968.0, 520.0) scale(1.375)" fill="#1F4E79">
+    <path d="M10 7L9 6L11.2929 3.70711L10.8013 3.21553C10.023 2.43724 8.96744 2 7.86677 2C4.63903 2 2 4.68015 2 7.93274C2 11.2589 4.69868 14 8 14C9.53708 14 11.0709 13.4144 12.2426 12.2426L13.6569 13.6569C12.095 15.2188 10.0458 16 8 16C3.56933 16 0 12.3385 0 7.93274C0 3.60052 3.50968 0 7.86677 0C9.49787 0 11.0622 0.647954 12.2155 1.80132L12.7071 2.29289L15 0L16 1V7H10Z" />
+  </g>
+<text x="1000" y="546" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="bold">update_idx</text>
+<line x1="330" y1="222" x2="412" y2="270" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="404,264 404,276 412,270" fill="#2F6B8A" />
+<line x1="330" y1="372" x2="412" y2="372" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="404,366 404,378 412,372" fill="#2F6B8A" />
+<line x1="950" y1="222" x2="868" y2="270" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="860,264 860,276 868,270" fill="#2F6B8A" />
+<line x1="950" y1="372" x2="868" y2="372" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="860,366 860,378 868,372" fill="#2F6B8A" />
+<line x1="330" y1="542" x2="470" y2="438" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="462,432 462,444 470,438" fill="#2F6B8A" />
+<line x1="950" y1="542" x2="810" y2="438" stroke="#2F6B8A" stroke-width="2" />
+<polygon points="802,432 802,444 810,438" fill="#2F6B8A" />
+<path fill="#E8EEF5" d="M68,620 H1212 A8,8 0 0 1 1220,628 V640 A8,8 0 0 1 1212,648 H68 A8,8 0 0 1 60,640 V628 A8,8 0 0 1 68,620 Z" />
+<text x="80" y="640" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">一句话概括：UNet 是一个以 latent 为主干、以时序注意力为记忆机制、以 depth 为结构偏置的流式视频去噪器。</text>
+</svg>

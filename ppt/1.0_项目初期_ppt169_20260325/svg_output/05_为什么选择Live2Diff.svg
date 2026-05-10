@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
+<rect x="0" y="0" width="1280" height="720" fill="#F7F9FC" rx="0"/>
+<rect x="0" y="0" width="1280" height="70" fill="#1F4E79" rx="0"/>
+<rect x="0" y="0" width="6" height="70" fill="#C43D3D" rx="0"/>
+<text x="40" y="46" text-anchor="start" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="28" font-weight="bold">01 为什么选择 Live2Diff</text>
+<text x="1220" y="46" text-anchor="end" fill="#FFFFFF" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">Ink-Diffusion</text>
+<rect x="0" y="70" width="1280" height="50" fill="#E8EEF5" rx="0"/>
+<rect x="0" y="70" width="6" height="50" fill="#2F6B8A" rx="0"/>
+<text x="40" y="102" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="normal">选择 Live2Diff 的原因，在于它已经解决了实时视频扩散里最难的共性问题</text>
+<line x1="40" y1="665" x2="1240" y2="665" stroke="#C9D3DF" stroke-width="1"/>
+<text x="40" y="695" text-anchor="start" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">数据来源：Live2Diff 架构分析</text>
+<text x="640" y="695" text-anchor="middle" fill="#7A8795" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" font-weight="normal">研究定位与系统理解</text>
+<text x="1220" y="695" text-anchor="end" fill="#5B6573" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" font-weight="normal">05</text>
+<rect x="60" y="150" width="540" height="430" fill="#FFFFFF" rx="8"/>
+<rect x="60" y="150" width="540" height="430" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<use data-icon="circle-checkmark" x="84" y="176" width="24" height="24" fill="#2E8B57"/>
+<text x="120" y="196" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">公开基线已具备的关键能力</text>
+<circle cx="86" cy="233" r="4" fill="#2F6B8A"/>
+<text x="102" y="238" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">单向时序注意力与 warmup</text>
+<circle cx="86" cy="275" r="4" fill="#2F6B8A"/>
+<text x="102" y="280" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">推理期多时间步 KV-cache</text>
+<circle cx="86" cy="317" r="4" fill="#2F6B8A"/>
+<text x="102" y="322" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">Depth Prior 结构约束</text>
+<circle cx="86" cy="359" r="4" fill="#2F6B8A"/>
+<text x="102" y="364" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">对 DreamBooth / LoRA 的风格兼容</text>
+<circle cx="86" cy="401" r="4" fill="#2F6B8A"/>
+<text x="102" y="406" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">TinyVAE / TensorRT 等加速路径</text>
+<rect x="640" y="150" width="580" height="430" fill="#FFFFFF" rx="8"/>
+<rect x="640" y="150" width="580" height="430" fill="none" rx="8" stroke="#C9D3DF" stroke-width="1"/>
+<use data-icon="layers" x="664" y="176" width="24" height="24" fill="#1F4E79"/>
+<text x="700" y="196" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" font-weight="bold">项目总体技术边界</text>
+<circle cx="666" cy="233" r="4" fill="#2F6B8A"/>
+<text x="682" y="238" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">基础骨架：SD1.5 latent diffusion</text>
+<circle cx="666" cy="275" r="4" fill="#2F6B8A"/>
+<text x="682" y="280" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">视频能力：Streaming UNet + temporal attention + KV-cache</text>
+<circle cx="666" cy="317" r="4" fill="#2F6B8A"/>
+<text x="682" y="322" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">实时性：LCM few-step + denoising batch + 加速后端</text>
+<circle cx="666" cy="359" r="4" fill="#2F6B8A"/>
+<text x="682" y="364" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">结构稳定：MiDaS 深度先验</text>
+<circle cx="666" cy="401" r="4" fill="#2F6B8A"/>
+<text x="682" y="406" text-anchor="start" fill="#1A1A1A" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" font-weight="normal">风格表达：prompt、DreamBooth、LoRA 等外部风格资源</text>
+<rect x="60" y="600" width="1160" height="40" fill="#E8EEF5" rx="8"/>
+<text x="80" y="626" text-anchor="start" fill="#1F4E79" font-family="Microsoft YaHei, Arial, sans-serif" font-size="18" font-weight="bold">结论：Live2Diff 的价值不是“已经会画水墨”，而是提供了一套成立的实时视频扩散底座。</text>
+</svg>
